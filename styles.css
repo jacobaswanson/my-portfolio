@@ -1,0 +1,45 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100vw;
+    height: 75px;
+    background-color: #F9F7F7;
+}
+
+#nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 25vw;
+    max-width: 300px;
+    min-width: 200px;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+/* Welcome Section Styles */
+
+#welcome-section {
+    height: 100vh;
+    background-color: #112D4E;
+}
+
+/* Projects Section Styles */
+
+/* Contact Section Styles */
+
+/* Footer Styles */
