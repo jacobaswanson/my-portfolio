@@ -59,6 +59,8 @@ html {
     color: var(--light-green);
 }
 
+/* Contact Bar Styles */
+
 #contact-bar {
     font-size: 3rem;
     display: flex;
@@ -111,9 +113,6 @@ html {
 .icon-link {
     height: 30px;
 }
-
-
-/* Contact Section Styles */
 
 .nav-item {
     list-style: none;
@@ -175,7 +174,8 @@ html {
 
 #projects {
     min-height: 100vh;
-    background-color: #222222;
+    background-color: var(--dark-font);
+    padding-bottom: 30px;
 }
 
 #projects h1 {
@@ -198,6 +198,20 @@ html {
     background-color: var(--dark-background);
 }
 
+.project-item {
+    box-shadow: 5px 5px 5px black;
+    transition: all 250ms linear;
+}
+
+.project-link:hover .project-title{
+    color: var(--light-green);
+    
+}
+
+.project-link:hover .project-item {
+    box-shadow: 5px 5px 5px var(--light-green);
+}
+
 .project-title {
     font-size: 2rem;
     padding: 2rem .5rem;
@@ -205,12 +219,19 @@ html {
     text-align: center;
     background-color: var(--dark-background);
     height: 10%;
+    transition: all 250ms linear;
 }
 
-.project-image {
+img {
     height: calc(100% - 6.8rem);
     object-fit: cover;
     width: 100%;
+    filter: grayscale(100%);
+    transition: all 250ms linear;
+}
+
+.project-link:hover img {
+    filter: none;
 }
 
 img {
@@ -218,5 +239,91 @@ img {
     width: 100%;
 }
 
+/* Contact Section Styles */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    background-color: var(--dark-background);
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-text h1{
+    font-size: 4rem;
+    color: var(--light-font);
+    width: 356px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-text p{
+    font-size: 3rem;
+    color: var(--light-green);
+}
+
+.email-button{
+    background-color: transparent;
+    border: var(--light-green) 2px solid;
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--light-green);
+    margin-top: 10px;
+    font-size: 2rem;
+    transition: all 250ms linear;
+}
+
+.email-button:hover {
+    background-color: var(--light-green);
+    color: var(--dark-font);
+    cursor: pointer;
+}
 
 /* Footer Styles */
+
+footer p {
+    text-align: center;
+    background-color: var(--dark-background);
+    padding-bottom: 5px;
+    font-size: 1.5rem;
+    transition: all 250ms linear;
+    height: 5vh;
+}
+
+footer a:hover p {
+    color: var(--light-green);
+}
+
+@media only screen and (max-width: 600px){
+    #email-bar {
+        right: 10px;
+        font-size: 1.5rem;
+        justify-content: flex-end;
+    }
+
+    #contact-bar {
+        font-size: 2.5rem;
+        left: 10px;
+        align-items: baseline;
+    }
+
+    .contact-text h1{
+        font-size: 3rem;
+    }
+
+    .contact-text p {
+        font-size: 2rem;
+    }
+
+    .email-button {
+        font-size: 1.75rem;
+    }
+}
