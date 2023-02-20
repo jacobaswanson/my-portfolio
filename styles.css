@@ -1,9 +1,30 @@
 /* Global Styles */
 
+html {
+    font-size: 62.5%;
+    --light-green: #22A39F;
+    --light-font: #F3EFE0;
+    --dark-font: #222222;
+    --light-background: #F9F7F7;
+    --dark-background: #434242;
+    font-family: Poppins, sans-serif;
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+*:link {
+    color: var(--light-font);
+    text-decoration: none;
+}
+
+*:visited {
+    color: var(--light-font);
+    text-decoration: none;
 }
 
 /* Navbar Styles */
@@ -11,10 +32,10 @@
 #navbar {
     display: flex;
     justify-content: flex-end;
-    position: fixed;
-    width: 100vw;
+    position: absolute;
+    right: 30px;
     height: 75px;
-    background-color: #F9F7F7;
+    background-color: transparent;
 }
 
 #nav-list {
@@ -22,24 +43,180 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    width: 25vw;
-    max-width: 300px;
-    min-width: 200px;
+    width: 20vw;
+    max-width: 350px;
+    min-width: 300px;
+    padding-right: 30px;
 }
+
+#nav-list a {
+    text-decoration: none;
+    transition: all 250ms linear;
+}
+
+#nav-list a:hover {
+    transform: translate(-5px, 0);
+    color: var(--light-green);
+}
+
+#contact-bar {
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    left: 20px;
+    bottom: 0;
+    right: auto;
+    width: 50px;
+    height: 300px;
+    color: var(--light-font);
+}
+
+#contact-bar .icon-link, #email-bar .email-address {
+    transition: all 250ms linear;
+}
+
+#contact-bar .icon-link:hover {
+    transform: translate(0, -5px);
+    color: var(--light-green);
+}
+
+#email-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 0;
+    left: auto;
+    width: 50px;
+    height: 300px;
+    font-size: 1.75rem;
+    color: var(--light-font)
+}
+
+#email-bar .email-address {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+#email-bar .email-address:hover {
+    transform: translate(0, -5px);
+    color: var(--light-green);
+}
+
+.icon-link {
+    height: 30px;
+}
+
+
+/* Contact Section Styles */
 
 .nav-item {
     list-style: none;
+    font-size: 2rem;
 }
 
 /* Welcome Section Styles */
 
 #welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 100vh;
-    background-color: #112D4E;
+    background-color: var(--dark-background);
+}
+
+#welcome-section h1 {
+    font-size: 2rem;
+    color: var(--light-font);
+    width: 356px;
+    margin: 0 auto;
+    animation-name: welcome-cursor;
+    animation-timing-function: step-end;
+}
+
+#welcome-section h2 {
+    font-size: 5rem;
+    color: var(--light-font);
+    margin: 0 auto;
+    text-align: center;
+}
+
+#welcome-section h3 {
+    margin: 0 auto;
+    color: var(--light-green);
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Syne Mono", sans-serif;
+}
+
+.blinking-cursor {
+    font-weight: 100;
+    font-size: 2rem;
+    font-family: "Syne Mono", sans-serif;
+    color: var(--light-green);
+    animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: var(--light-green);
+}
 }
 
 /* Projects Section Styles */
 
-/* Contact Section Styles */
+#projects {
+    min-height: 100vh;
+    background-color: #222222;
+}
+
+#projects h1 {
+    color: var(--light-font);
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.project-grid {
+    display: grid;
+    width: 80vw;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 4rem;
+}
+
+.title-container {
+    background-color: var(--dark-background);
+}
+
+.project-title {
+    font-size: 2rem;
+    padding: 2rem .5rem;
+    color: var(--light-font);
+    text-align: center;
+    background-color: var(--dark-background);
+    height: 10%;
+}
+
+.project-image {
+    height: calc(100% - 6.8rem);
+    object-fit: cover;
+    width: 100%;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
 
 /* Footer Styles */
