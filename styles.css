@@ -198,7 +198,7 @@ html {
     background-color: var(--dark-background);
 }
 
-.project-item {
+.project-tile {
     box-shadow: 5px 5px 5px black;
     transition: all 250ms linear;
 }
@@ -208,7 +208,7 @@ html {
     
 }
 
-.project-link:hover .project-item {
+.project-link:hover .project-tile {
     box-shadow: 5px 5px 5px var(--light-green);
 }
 
