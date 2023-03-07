@@ -29,6 +29,10 @@ html {
 
 /* Navbar Styles */
 
+#skills {
+    display: inline-block;
+}
+
 #navbar {
     display: flex;
     justify-content: flex-end;
@@ -130,6 +134,7 @@ html {
 }
 
 #welcome-section h1 {
+    display: inline;
     font-size: 2rem;
     color: var(--light-font);
     width: 356px;
@@ -145,7 +150,8 @@ html {
     text-align: center;
 }
 
-#welcome-section h3 {
+#welcome-section span {
+    display: inline-block;
     margin: 0 auto;
     color: var(--light-green);
     text-align: center;
@@ -154,6 +160,7 @@ html {
 }
 
 .blinking-cursor {
+    display: inline-block;
     font-weight: 100;
     font-size: 2rem;
     font-family: "Syne Mono", sans-serif;
